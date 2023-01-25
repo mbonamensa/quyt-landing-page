@@ -14,6 +14,7 @@ img {
 // Color variables
 $quyt: #D7485D;
 $light-grey: #F2F2F2;
+$lighter-grey: rgba(242, 242, 242, 0.7);
 $dark-grey: #1E1E1E;
 $grey-bg-gradient: linear-gradient(61.5deg, rgba(242, 242, 242, 0.2268) 19.76%, rgba(242, 242, 242, 0.2268) 41.28%, rgba(242, 242, 242, 0.0447238) 153.27%, rgba(242, 242, 242, 0) 180.78%);
 $grey-border: #808080;
@@ -84,6 +85,16 @@ nav {
         @include flexbox(row, center);
         gap: 1.5rem;
         list-style: none;
+
+        li a {
+            text-decoration: none;
+            color: $light-grey;
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+                color: $lighter-grey;
+            }
+        }
 
         .hidden-menu {
             display: none;
